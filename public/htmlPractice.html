@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h1>Html Element and Attributes practice</h1>
 
     <div class="sectionWrapper">
         <div class="tagDetails">
@@ -30,7 +31,7 @@
             </textarea>
         </div>
     </div>
-    <!-- First tag end here -->
+    <!-- Tag 1 end here -->
 
     <div class="sectionWrapper">
         <div class="tagDetails">
@@ -50,28 +51,164 @@
             </textarea>
         </div>
     </div>
-    <!-- second tag end here -->
+    <!-- Tag 2 end here -->
 
     <div class="sectionWrapper">
         <div class="tagDetails">
             <p>Tag name:- &lt;iframe&gt;</p>
-            <p>Discription:- &lt;p&gt; tag stands for "paragraph".
-                It is a block-level element that is commonly used for structuring and formatting text content.
-                Avoid nesting block-level elements inside p tag, as this is invalid HTML and inconsistent rendering.
+            <p>Discription:- &lt;iframe&gt; tag is used to embed another web page or content within the current web
+                page.
+                It stands for "inline frame" and is commonly used to display external content like videos, maps, or
+                other websites.
+
             </p>
-            <p>Important Attributes:- id, class, style, title, </p>
+            <p>Important Attributes:- src, width, height, frameborder, scrolling </p>
         </div>
         <div class="outputWrapper">
-            <p style="background-color: red;">p tag as block level</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.693560007188!2d75.79809597497096!3d26.849697362796693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5912a8a15e1%3A0xcce76a28f822c003!2sDianApps!5e0!3m2!1sen!2sin!4v1695720097981!5m2!1sen!2sin"
+                width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="codeWrapper">
-            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
-                <p style="background-color: red;">p tag as block level</p>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="7">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.693560007188!2d75.79809597497096!3d26.849697362796693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5912a8a15e1%3A0xcce76a28f822c003!2sDianApps!5e0!3m2!1sen!2sin!4v1695720097981!5m2!1sen!2sin" 
+                width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </textarea>
         </div>
     </div>
-    <!-- third tag end here -->
+    <!-- Tag 3 end here -->
 
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p>Tag name:- &lt;img&gt;</p>
+            <p>Discription:- It is used to embed images on a web page.
+                It allows to display images such as photographs, illustrations, icons, and other graphical content.
+            </p>
+            <p>Important Attributes:- src, alt, width, height, title, style </p>
+        </div>
+        <div class="outputWrapper">
+            <img src="https://source.unsplash.com/user/c_v_r" alt="dummy images" width="300" height="300" >
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="1">
+                <img src="https://source.unsplash.com/user/c_v_r" alt="dummy images" width="300" height="300" >
+            </textarea>
+        </div>
+    </div>
+    <!-- Tag 4 end here -->
+
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p>Tag name:- &lt;pre&gt;</p>
+            <p>Discription:- It is used to define performatted text.
+                performatted text is displayed in a fixed-width font and preserves both spaces and line breaks.
+                This tag is useful for displaying text that should maintain its original formatting, such as code snippets or ASCII art.
+            </p>
+            <p>Important Attributes:- it does not have specific attributes. it is used with other tags &lt;code&gt; and &lt;samp&gt;</p>
+        </div>
+        <div class="outputWrapper">
+            <pre>
+                <code>
+                    function greet() {
+                        consoe.log("Hello, world!");
+                    }
+                </code>
+            </pre>
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="8">
+                <pre>
+                    <code>
+                        function greet() {
+                            consoe.log("Hello, world!");
+                        }
+                    </code>
+                </pre>
+            </textarea>
+        </div>
+    </div>
+    <!-- Tag 5 end here -->
+
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p>Tag name:- &lt;ins&gt;</p>
+            <p>Discription:- It is used to indicate that text has been added to a document.
+                It is typically displayed with an underline by default and it can be used to highlight changes or additions in a document.
+                it is a semantic HTML element.
+            </p>
+            <p>Important Attributes:- datetime </p>
+        </div>
+        <div class="outputWrapper">
+           This is an example of <ins datetime="timeStamp">Inserted text</ins> in a document.
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="1">
+                This is an example of <ins datetime="timeStamp">Inserted text</ins> in a document.
+            </textarea>
+        </div>
+    </div>
+    <!-- Tag 6 end here -->
+
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p>Tag name:- &lt;bdo&gt;</p>
+            <p>Discription:- Bidirectional Override tag is used to override the default text direction of text within a document.
+
+            </p>
+            <p>Important Attributes:- dir </p>
+        </div>
+        <div class="outputWrapper">
+            <bdo dir="rtl">Text content</bdo>
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                <bdo dir="rtl">Text content</bdo>
+            </textarea>
+        </div>
+    </div>
+    <!-- Tag 7 end here -->
+
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p>Tag name:- &lt;marquee&gt;</p>
+            <p>Discription:- It is used to create a scrolling or moving text or image element within a web page.
+                In mordern web development similar effects are used by CSS and Javascript for more control and flexibility.
+            </p>
+            <p>Important Attributes:- behavior, direction, scrollamount, scrolldelay </p>
+        </div>
+        <div class="outputWrapper">
+            <marquee direction="left" behavior="scroll" scrollamount="3">moving right to left 3 times.</marquee>
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                <marquee direction="left" behavior="scroll" scrollamount="3">Text content</marquee>
+            </textarea>
+        </div>
+    </div>
+    <!-- Tag 8 end here -->
+
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p>Tag name:- &lt;a&gt;</p>
+            <p>Discription:- It is used to create hyperlinks.
+                It is one of the fundamental elements fo creating web navigation and connecting web content.
+
+            </p>
+            <p>Important Attributes:- href, target, download, rel</p>
+        </div>
+        <div class="outputWrapper">
+            Click on <a href="https://www.google.com" target="blank">Google</a> for a search.
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                Click on <a href="https://www.google.com" target="blank">Google</a> for a search.
+            </textarea>
+        </div>
+    </div>
+    <!-- Tag 9 end here -->
 
 
     <div class="sectionWrapper">
