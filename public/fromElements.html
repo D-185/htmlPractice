@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements in detail</title>
+    <link rel="stylesheet" href="./formElements.css">
+</head>
+
+<body>
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p><b>Tag name:-</b> &lt;form&gt;</p>
+            <p><b>Discription:-</b> It is used to create a web form.
+                Forms are essential for collecting information from users, such as login credentials, search queries,
+                feedback etc...
+            </p>
+            <p><b>Important Attributes:-</b><br>
+                <b>action:-</b> It specifies the URL to which the form data should be sent when the user submits the
+                form.<br>
+                <b>target:-</b> It specifies where to display the response that is received after submitting the
+                form.<br>
+                <b>method:-</b> It specifies the HTTP method to be used when submitting the form data.<br>
+                <b>autocomplete:-</b> It specifies whether a form should have autocomplete on or off.<br>
+                <b>novalidate:-</b> It specifies that form data(input) should not be validated when submitted.<br>
+            </p>
+            <p><b>Important Elements:-</b><br>
+                <b>input:-</b> It can be used for various input types, including text, email, password, radio buttons,
+                checkboxes, and more.<br>
+                <b>label:-</b> It is used to provide a text label for form controls, improving accessibility and
+                usability.<br>
+                <b>textarea:-</b> It is used for multiline text input, allowing users to enter longer pieces of
+                text.<br>
+                <b>select:-</b> It creates a dropdown menu from which users can select one or more options.<br>
+                <b>button:-</b> It is used to create clickable buttons within forms.<br>
+                <b>fieldset and legend:-</b> These elements are used to group related form controls and provide a legend
+                or caption for the group.<br>
+                <b>datalist:-</b> It is used in conjuction with '&lt;input type="text"&gt;' to provide a list of
+                predefined options for autocompletion.<br>
+                <b>optgroup:-</b> It defines a group of related options in a drop-down list.<br>
+                <b>output:-</b> It defines the result of a calculation.<br>
+            </p>
+        </div>
+        <div class="outputWrapper">
+            <div class="formWrapper">
+                <form id="inputForm" >
+                    <fieldset>
+                        <legend>Contact form</legend>
+                        <label for="firstname">First Name</label>
+                        <input type="text" name="firstname" id="firstname" value="" placeholder="First Name"
+                            required><br>
+                        <label for="lastname">Last Name</label>
+                        <input type="text" name="lastname" id="lastname" value="" placeholder="Last Name"
+                            maxlength="26"><br>
+                        <label for="mail">Enter email</label>
+                        <input type="email" name="mail" id="mail" placeholder="Enter Email address"><br>
+                        <label for="number">Contact Number</label>
+                        <input type="tel" name="number" id="number" value="" pattern="[0-9]{10}" maxlength="10" placeholder="Enter Phone number"><br>
+                        <label for="password">Enter Password</label>
+                        <input type="password" name="password" id="password"><br>
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="select">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label>Language:</label>
+                        <label for="english">
+                            <input type="checkbox" id="english" name="languages" value="english" class="langCheckbox">
+                            English
+                        </label>
+                        <label for="hindi">
+                            <input type="checkbox" id="hindi" name="languages" value="hindi" class="langCheckbox">
+                            Hindi
+                        </label>
+                        <label for="country">Country:</label>
+                        <select name="country" id="country" required>
+                            <option value="select">Select Country</option>
+                            <option value="india">India</option>
+                            <option value="russia">Russia</option>
+                        </select>
+                        <label for="state">State:</label>
+                        <select name="state" id="state" required></select>
+                        <label for="city">City:</label>
+                        <select name="city" id="city" required></select>
+                        <label for="comments">Comments</label>
+                        <textarea name="comments" id="comments" cols="20" rows="5"></textarea><br>
+                        <label for="date">Date:</label>
+                        <input type="date" name="date" id="date"><br>
+                        <div>
+                            <button id="preview">Preview</button>
+                            <button type="reset">Reset</button>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const countrySelect = document.getElementById('country');
+        const stateSelect = document.getElementById('state');
+        const citySelect = document.getElementById('city');
+
+        countrySelect.addEventListener('change', ()=>{
+            const indiaStates = ['Rajasthan', 'Punjab', 'Gujrat'];
+            const russiaStates = [];
+
+            const selectedCountry = countrySelect.value;
+            let states;
+
+            if(selectedCountry === 'india'){
+                states = indiaStates;
+            } else if(selectedCountry === 'russia'){
+                states = russiaStates;
+            } else {
+                states = [];
+            }
+
+            stateSelect.innerHTML = `<option value="" disabled selected>Select State</option>`;
+
+            states.forEach((state) => {
+                const option = document.createElement('option');
+                option.value = state;
+                option.textContent = state;
+                stateSelect.appendChild(option);
+            });
+
+            citySelect.innerHTML = `<option value="" disabled selected>Select City</option>`;
+        });
+
+        stateSelect.addEventListener('change', ()=> {
+            const selectedState = stateSelect.value;
+            let cities = [];
+
+            if(selectedState === 'Rajasthan'){
+                cities = ['Jaipur', 'Jodhpur', 'Kota'];
+            } else if(selectedState === 'Punjab'){
+                cities = ['Ludhiana', 'Amritsar', 'Jalandhar']
+            } else if(selectedState === 'Gujrat'){
+                cities = ['Surat', 'Rajkot', 'Jamnagar']
+            }
+
+            citySelect.innerHTML = `<option value="" disabled selected>Select City</option>`;
+
+            cities.forEach((city) => {
+                console.log('hi')
+                const option = document.createElement('option');
+                option.value = city;
+                option.textContent = city;
+                citySelect.appendChild(option);
+            })
+        })
+
+        const previewButton = document.getElementById('preview');
+        const inputForm = document.getElementById('inputForm');
+
+        previewButton.addEventListener('click', (e)=> {
+            e.preventDefault();
+            const formData = new FormData(inputForm);
+            const formObject = Object.fromEntries(formData.entries());
+
+            alert(JSON.stringify(formObject, null, 2));
+        });
+    </script>
+</body>
+
+</html>

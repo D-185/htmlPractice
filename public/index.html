@@ -29,7 +29,7 @@
       background: #ECEFF1;
       color: rgba(0, 0, 0, 0.87);
       font-family: Roboto, Helvetica, Arial, sans-serif;
-      
+
     }
 
     * {
@@ -77,6 +77,30 @@
       text-align: center;
       color: white;
     }
+    .dropdownMenu{
+      display: none;
+      list-style-type: none;
+      padding: 0;
+    }
+    .dropdownButton{
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+    .dropdownMenu li {
+      padding: 5px;
+      font-size: 11px;
+    }
+    .dropdownMenu li:hover {
+      background-color: #f1f1f1;
+    }
+    .dropdown button::before {
+      content: "▶";
+      position: absolute;
+      left: 20px;
+    }
 
     @media (max-width: 600px) {
 
@@ -90,25 +114,64 @@
 </head>
 
 <body>
-    <header>
-      <h2>Dian-Apps</h2>
-      <div>Software-Tranee Exercise</div>
-    </header>
-    <section>
-      <nav>
-        <ul>
-          <li>
-            <a href="javascript:void(0);" onclick="loadIframe();">HTML Practice</a>
-          </li>
-        </ul>
-      </nav>
-      <article>
-        <iframe id="myIframe" src="" width="100%" height="100%"></iframe>
-      </article>
-    </section>
-    <footer>
-      <div>The end is not really the end, it's just the beginning of something new</div>
-    </footer>
+  <header>
+    <h2>Dian-Apps</h2>
+    <div>Software-Tranee Exercise</div>
+  </header>
+  <section>
+    <nav>
+      <h2>Content</h2>
+      <ul>
+        <li>
+          <div class="dropdown">
+            <button class="dropdownButton">HTML Basics</button>
+            <ul class="dropdownMenu">
+              <li>
+                <a href="javascript:void(0);" onclick="loadIframe();">HTML Element and Attributes</a>
+              </li>
+              <li>
+                <a href="javascript:void(0);" onclick="loadIframe();">Form Elements</a>
+              </li>
+              <li>
+                <a href="javascript:void(0);" onclick="loadIframe();">Table</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="dropdown">
+            <button class="dropdownButton">CSS Basics</button>
+            <ul class="dropdownMenu">
+              <li>
+                <a href="javascript:void(0);" onclick="loadIframe();">Css Property</a>
+              </li>
+              <li>
+                <a href="javascript:void(0);" onclick="loadIframe();">Box Model</a>
+              </li>
+              <li>
+                <a href="javascript:void(0);" onclick="loadIframe();">Flex Model</a>
+              </li>
+              <li>
+                <a href="javascript:void(0);" onclick="loadIframe();">Grid Model</a>
+              </li>
+              <li>
+                <a href="javascript:void(0);" onclick="loadIframe();">Transition Animation</a>
+              </li>
+              <li>
+                <a href="javascript:void(0);" onclick="loadIframe();">Component Design</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <article>
+      <iframe id="myIframe" src="" width="100%" height="100%"></iframe>
+    </article>
+  </section>
+  <footer>
+    <div>The end is not really the end, it's just the beginning of something new</div>
+  </footer>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const loadEl = document.querySelector('#load');
@@ -151,6 +214,37 @@
       let iframe = document.getElementById("myIframe");
       iframe.src = "https://testfirebase-5f5a7.web.app/htmlPractice.html";
     }
+    const button = document.querySelectorAll('.dropdownButton');
+    const menu = document.querySelectorAll('.dropdownMenu');
+    console.log('button', button[0], button[1] )
+    button[0].addEventListener('click', () => {
+      if(menu[0].style.display === "block") {
+        menu[0].style.display = "none";
+      } else {
+        menu[0].style.display = "block";
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if(!menu[0].contains(e.target) && !button[0].contains(e.target)){
+        menu[0].style.display = 'none';
+      }
+    });
+
+    button[1].addEventListener('click', () => {
+      if(menu[1].style.display === "block") {
+        menu[1].style.display = "none";
+      } else {
+        menu[1].style.display = "block";
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if(!menu[1].contains(e.target) && !button[1].contains(e.target)){
+        menu[1].style.display = 'none';
+      }
+    });
+
+
   </script>
 </body>
 
