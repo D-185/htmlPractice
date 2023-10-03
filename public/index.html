@@ -127,13 +127,13 @@
             <button class="dropdownButton">HTML Basics</button>
             <ul class="dropdownMenu">
               <li>
-                <a href="javascript:void(0);" onclick="loadIframe();">HTML Element and Attributes</a>
+                <a href="javascript:void(0);" onclick="loadIframe(`https://testfirebase-5f5a7.web.app/htmlPractice.html`);">HTML Element and Attributes</a>
               </li>
               <li>
-                <a href="javascript:void(0);" onclick="loadIframe();">Form Elements</a>
+                <a href="javascript:void(0);" onclick="loadIframe(`https://testfirebase-5f5a7.web.app/fromElements.html`);">Form Elements</a>
               </li>
               <li>
-                <a href="javascript:void(0);" onclick="loadIframe();">Table</a>
+                <a href="javascript:void(0);" onclick="loadIframe(`https://testfirebase-5f5a7.web.app/htmlTables.html`);">Table</a>
               </li>
             </ul>
           </div>
@@ -209,10 +209,10 @@
         loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
       }
     });
-    function loadIframe() {
+    function loadIframe(url) {
       console.log("hi")
       let iframe = document.getElementById("myIframe");
-      iframe.src = "https://testfirebase-5f5a7.web.app/htmlPractice.html";
+      iframe.src = url;
     }
     const button = document.querySelectorAll('.dropdownButton');
     const menu = document.querySelectorAll('.dropdownMenu');
