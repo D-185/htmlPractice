@@ -143,22 +143,16 @@
             <button class="dropdownButton">CSS Basics</button>
             <ul class="dropdownMenu">
               <li>
-                <a href="javascript:void(0);" onclick="loadIframe();">Css Property</a>
+                <a href="javascript:void(0);" onclick="loadIframe(`https://testfirebase-5f5a7.web.app/cssProperty.html`);">Css Property</a>
               </li>
               <li>
-                <a href="javascript:void(0);" onclick="loadIframe();">Box Model</a>
+                <a href="javascript:void(0);" onclick="loadIframe(`https://testfirebase-5f5a7.web.app/gridModel.html`);">Grid Model</a>
               </li>
               <li>
-                <a href="javascript:void(0);" onclick="loadIframe();">Flex Model</a>
+                <a href="javascript:void(0);" onclick="loadIframe(`https://testfirebase-5f5a7.web.app/transitionProperty.html`);">Transition Animation</a>
               </li>
               <li>
-                <a href="javascript:void(0);" onclick="loadIframe();">Grid Model</a>
-              </li>
-              <li>
-                <a href="javascript:void(0);" onclick="loadIframe();">Transition Animation</a>
-              </li>
-              <li>
-                <a href="javascript:void(0);" onclick="loadIframe();">Component Design</a>
+                <a href="javascript:void(0);" onclick="loadIframe(`https://testfirebase-5f5a7.web.app/components.html`);">Component Design</a>
               </li>
             </ul>
           </div>
@@ -213,6 +207,8 @@
       console.log("hi")
       let iframe = document.getElementById("myIframe");
       iframe.src = url;
+      console.log('iframe.src',iframe.src)
+
     }
     const button = document.querySelectorAll('.dropdownButton');
     const menu = document.querySelectorAll('.dropdownMenu');

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Property</title>
+    <link rel="stylesheet" href="./transitionProperty.css">
+</head>
+
+<body>
+    <h1 class="titleWrap">Transition and animation Property</h1>
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p>Transition Property:- &lt;linear&gt;</p>
+        </div>
+        <div class="outputWrapper">
+            <div class="divClass" id="div1">Linear</div><br>
+
+            <div class="divClass" id="div2">Ease</div>
+            <br>
+            <div class="divClass" id="div3">Ease-in</div>
+            <br>
+            <div class="divClass" id="div4">Ease-out</div>
+            <br>
+            <div class="divClass" id="div5">Ease-in-out</div>
+            <br>
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="29">
+                .sectionWrapper .outputWrapper .divClass {
+                    width: 100px;
+                    height: 100px;
+                    background: red;
+                    transition: width 2s, height 2s, transform 2s;
+                }
+                .sectionWrapper .outputWrapper .divClass:hover {
+                    width: 300px;
+                    transform: rotate(180deg);
+                }
+                
+                .sectionWrapper .outputWrapper #div1 {
+                    transition-timing-function: linear;
+                    transition-delay: 1s;
+                }
+                .sectionWrapper .outputWrapper #div2 {
+                    transition-timing-function: ease;
+                }
+                .sectionWrapper .outputWrapper #div3 {
+                    transition-timing-function: ease-in;
+                }
+                .sectionWrapper .outputWrapper #div4 {
+                    transition-timing-function: ease-out;
+                }
+                .sectionWrapper .outputWrapper #div5 {
+                    transition-timing-function: ease-in-out;
+                }
+                
+            </textarea>
+        </div>
+    </div>
+    <!-- section1 end here -->
+
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p>Animation Type:- &lt;Shape changing with rotation.&gt;</p>
+        </div>
+        <div class="outputWrapper">
+            <div class="animationdiv1"></div>
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="50">.sectionWrapper .outputWrapper .animationdiv1 {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                z-index: 1;
+                animation-name: div1animation;
+                animation-duration: 10s;
+                animation-iteration-count: 5;
+                animation-timing-function: normal;
+            }
+            
+            
+            @keyframes div1animation {
+                0% {
+                    left: 0px;
+                    top: 0px;
+                    background-color: transparent;
+                    transform: rotate(0deg);
+                    overflow: hidden;
+                }
+            
+                25% {
+                    left: 100px;
+                    top: 0px;
+                    border-radius: 100px;
+                    background-color: transparent;
+                    transform: rotate(0deg);
+                    overflow: hidden;
+                }
+            
+                50% {
+                    left: 200px;
+                    top: 0px;
+                    border-radius: 0px;
+                    background-color: transparent;
+                    transform: rotate(0deg);
+                    overflow: hidden;
+                }
+            
+                75% {
+                    left: 300px;
+                    top: 0px;
+                    background-color: yellow;
+                    transform: rotate(45deg);
+                    overflow: visible;
+                }
+            
+                100% {
+                    left: 400px;
+                    top: -200px;
+                    background-color: transparent;
+                    transform: rotate(0deg);
+                    overflow: visible;
+                }
+            }
+            
+            .sectionWrapper .outputWrapper .animationdiv1::after {
+                content: "";
+                position: absolute;
+                z-index: 2;
+                animation-name: divAfterAnimation;
+                animation-duration: 10s;
+                animation-iteration-count: 5;
+                animation-timing-function: normal;
+            }
+            
+            
+            @keyframes divAfterAnimation {
+                0% {
+                    width: 200px;
+                    height: 200px;
+                    border: 0px;
+                    border-bottom: 0px;
+                    background-color: #2196F3;
+                    transform: rotate(0deg);
+                }
+            
+                25% {
+                    width: 200px;
+                    height: 200px;
+                    border: 0px;
+                    border-bottom: 0px;
+                    background-color: burlywood;
+                    transform: rotate(0deg);
+                }
+            
+                50% {
+                    width: 200px;
+                    height: 200px;
+                    border: 0px;
+                    border-bottom: 0px;
+                    background-color: #4CAF50;
+                    transform: rotate(45deg);
+                }
+            
+                75% {
+                    width: 200px;
+                    height: 200px;
+                    border: 0px;
+                    border-bottom: 0px;
+                    background-color: yellow;
+                    transform: rotate(45deg);
+                }
+            
+                100% {
+                    width: 0px;
+                    height: 0px;
+                    border: 150px solid transparent;
+                    border-bottom: 250px solid brown;
+                }
+            }</textarea>
+        </div>
+    </div>
+    <!-- section2 end here -->
+
+
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p>Animation Type:- &lt;Moving car&gt;</p>
+        </div>
+        <div class="outputWrapper">
+            <div class="animationdiv2">
+                <img src="../public/assets/car.png" alt="Car Image" id="carImg">
+                <div class="wheelFirst">
+
+                </div>
+                <div class="wheelSecond">
+
+                </div>
+            </div>
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="50">
+                .sectionWrapper .outputWrapper .animationdiv2 {
+                    position: relative;
+                    width: 250px;
+                    animation-name: moving;
+                    animation-duration: 5s;
+                    animation-delay: 2s;
+                    animation-iteration-count: 10;
+                    animation-timing-function: linear;
+                }
+                @keyframes moving {
+                    0% {
+                        left: 0px;
+                        top: 0px;
+                        transform: scaleY(1);
+                    }
+                    50%{
+                        left: 40%;
+                        top: -10px;
+                        transform: scaleY(0.8);
+                    }
+                    100% {
+                        left: 80%;
+                        top: 0px;
+                        transform: scaleY(1);
+                    }
+                }
+                
+                .sectionWrapper .outputWrapper .animationdiv2 #carImg{
+                    width: 250px;
+                    height: 100px;
+                    animation-name: carMove;
+                    animation-duration: 5s;
+                    animation-delay: 2s;
+                    animation-iteration-count: 10;
+                    animation-timing-function: linear;
+                }
+                
+                @keyframes carMove {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    30%{
+                        transform: rotate(-7deg);
+                    }
+                    60% {
+                        transform: rotate(7deg);
+                    }
+                    90% {
+                        transform: rotate(-2deg);
+                    }
+                    100% {
+                        transform: rotate(0deg);
+                    }
+                }
+                
+                .sectionWrapper .outputWrapper .animationdiv2 .wheelFirst{
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    background-color: black;
+                    border-radius: 25px;
+                    bottom: 0px;
+                    left: 20px;
+                    z-index: 1;
+                    animation-name: wheelFirst;
+                    animation-duration: 5s;
+                    animation-delay: 2s;
+                    animation-iteration-count: 10;
+                    animation-timing-function: linear;
+                }
+                .sectionWrapper .outputWrapper .animationdiv2 .wheelFirst::before{
+                    content: "";
+                    position: absolute;
+                    width: 5px;
+                    height: 50px;
+                    z-index: 2;
+                    background-color: white;
+                    bottom: 0px;
+                    left: 22px;
+                }
+                .sectionWrapper .outputWrapper .animationdiv2 .wheelFirst::after{
+                    content: "";
+                    position: absolute;
+                    width: 50px;
+                    height: 4px;
+                    z-index: 2;
+                    background-color: white;
+                    bottom: 22px;
+                    left: 0px;
+                }
+                
+                @keyframes wheelFirst {
+                    0% {
+                        transform: rotate(0deg) scale(1);
+                    }
+                    30% {
+                        transform: rotate(360deg) scale(0.9);
+                    }
+                    60% {
+                        transform: rotate(720deg) scale(1);
+                    }
+                    90% {
+                        transform: rotate(1080deg) scale(0.9);
+                    }
+                    100% {
+                        transform: rotate(1200deg) scale(1);
+                    }
+                }
+                
+                .sectionWrapper .outputWrapper .animationdiv2 .wheelSecond{
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    background-color: black;
+                    border-radius: 25px;
+                    bottom: 0px;
+                    right: 27px;
+                    z-index: 1;
+                    animation-name: wheelSecond;
+                    animation-duration: 5s;
+                    animation-delay: 2s;
+                    animation-iteration-count: 10;
+                    animation-timing-function: linear;
+                }
+                .sectionWrapper .outputWrapper .animationdiv2 .wheelSecond::before{
+                    content: "";
+                    position: absolute;
+                    width: 5px;
+                    height: 50px;
+                    z-index: 2;
+                    background-color: white;
+                    bottom: 0px;
+                    right: 22px;
+                }
+                .sectionWrapper .outputWrapper .animationdiv2 .wheelSecond::after{
+                    content: "";
+                    position: absolute;
+                    width: 50px;
+                    height: 4px;
+                    z-index: 2;
+                    background-color: white;
+                    bottom: 22px;
+                    right: 0px;
+                }
+                
+                @keyframes wheelSecond {
+                    0% {
+                        transform: rotate(0deg) scale(1);
+                    }
+                    30% {
+                        transform: rotate(360deg) scale(1);
+                    }
+                    60% {
+                        transform: rotate(720deg) scale(0.9);
+                    }
+                    90% {
+                        transform: rotate(1080deg) scale(1);
+                    }
+                    100% {
+                        transform: rotate(1200deg) scale(1);
+                    }
+                }</textarea>
+        </div>
+    </div>
+    <!-- section3 end here -->
+</body>
+
+</html>
