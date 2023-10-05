@@ -1,0 +1,150 @@
+.sectionWrapper{
+    margin: 10px;
+    padding: 10px 0px;
+    background-color: #ddebdc;
+}
+.sectionWrapper .tagDetails{
+    padding: 20px;
+}
+
+.sectionWrapper .outputWrapper{
+    padding: 10px 20px;
+    background-color: #a9e0b2;
+}
+.sectionWrapper .outputWrapper .buttonWrapper{
+    text-align: center;
+    font-family: system-ui;
+    border-radius: 4px;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s, box-shadow 0.5s;
+    background-color: #1976d2;
+}
+.sectionWrapper .outputWrapper .buttonWrapper:hover{
+    background-color: #196dc1;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 /14%), 0px 1px 10px 0px rgb(0 0 0 /12%);
+}
+.sectionWrapper .outputWrapper .icon{
+    position: relative;
+    font-size: 23px;
+    color: #534e4e;
+}
+.sectionWrapper .outputWrapper .numbers{
+    position: absolute;
+    background-color: #007fc5;
+    color: white;
+    font-family: ui-sans-serif;
+    top: -10px;
+    left: 14px;
+    width: 22px;
+    height: 21px;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    border-radius: 12px;
+}
+.sectionWrapper .outputWrapper .outerDiv{
+    display: flex;
+    padding: 0px;
+    align-items: center;
+    width: 320px;
+    margin: 0px;
+    height: 200px;
+    background-color: white;
+}
+.sectionWrapper .outputWrapper .ulDiv{
+    width: 100%;
+    padding: 0px 0px;
+    list-style: none;
+}
+.sectionWrapper .outputWrapper .listItems{
+    margin: 0px 0px;
+    padding: 15px 20px;
+    border-bottom: 2px solid #e9e9e9;
+}
+.sectionWrapper .outputWrapper .listItems:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.sectionWrapper .outputWrapper .outerDivNav{
+    padding: 0px 30px;
+    background-color: rgb(25, 118, 210);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px, rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
+}
+.sectionWrapper .outputWrapper .outerDivNav .hamburger{
+    display: flex;
+    flex-direction: column;
+    margin: auto 0px;
+}
+.sectionWrapper .outputWrapper .outerDivNav .hamburger .linesNav{
+    width: 25px;
+    height: 3px;
+    border-radius: 1px;
+    background-color: white;
+    margin: 2px 0px;
+}
+.sectionWrapper .outputWrapper .outerDivNav .searchBarNav{
+    margin: auto 0px;
+    width: 225px;
+    height: 35px;
+    background-color: #ffffff1f;
+    mix-blend-mode: screen;
+    padding: 0px 12px;
+    font-family: ui-serif;
+    border: 1px solid #ffffff0f;
+    border-radius: 4px;
+    font-size: 20px;
+}
+.sectionWrapper .outputWrapper .outerDivNav .linkNavWrap{
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.sectionWrapper .outputWrapper .outerDivNav .linkNavWrap .myIcons{
+    margin: auto 0px;
+    font-size: 25px;
+    position: relative;
+}
+.sectionWrapper .outputWrapper .outerDivNav .myIcons::after{
+    content: "4";
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    background-color: red;
+    top: -6px;
+    right: -10px;
+    font-family: math;
+    line-height: 18px;
+    width: 19px;
+    text-align: center;
+    border-radius: 15px;
+    height: 19px;
+}
+
+
+
+
+
+
+@media (max-width: 768px){
+    .sectionWrapper .outputWrapper .buttonWrapper{
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+    
+}
+.sectionWrapper .codeWrapper{
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.sectionWrapper .codeWrapper .textAreaWrapper{
+    width: 100%;
+    border: 2px solid black;
+    padding: 20px 0;
+}
