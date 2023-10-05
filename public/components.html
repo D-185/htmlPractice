@@ -4,28 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Components</title>
+    <link rel="stylesheet" href="./components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <div class="sectionWrapper">
         <div class="tagDetails">
-            <p>Tag name:- &lt;div&gt;</p>
-            <p>Discription:- It stands for "division" or "division container".
-                It is a block-level container.
-                it doesn't have any specific visual formatting.
-                It is used to group together other HTML elements.
-                Also used for styling, scripting, or layout to a specific section of content.
-            </p>
-            <p>Important Attributes:- id, class, style, title, </p>
+            <p>Component Name:- &lt;Button&gt;</p>
         </div>
         <div class="outputWrapper">
-            <div style="background-color: red;">div tag as a block level element</div>
+            <div ><button class="buttonWrapper">Button</button></div>
         </div>
         <div class="codeWrapper">
-            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
-                <div style="background-color: red;">div tag as a block level element</div>
-            </textarea>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="20">
+                .sectionWrapper .outputWrapper .buttonWrapper{
+                    text-align: center;
+                    font-family: system-ui;
+                    border-radius: 4px;
+                    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+                    color: white;
+                    cursor: pointer;
+                    transition: background-color 0.5s, box-shadow 0.5s;
+                    background-color: #1976d2;
+                }
+                .sectionWrapper .outputWrapper .buttonWrapper:hover{
+                    background-color: #196dc1;
+                    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 /14%), 0px 1px 10px 0px rgb(0 0 0 /12%);
+                }
+                @media (max-width: 768px){
+                    .sectionWrapper .outputWrapper .buttonWrapper{
+                        font-size: 1.2em;
+                        line-height: 1.2em;
+                    }
+                }</textarea>
         </div>
     </div>
-    <!-- First tag end here -->
+    <!-- Component end here -->
+
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p>Component Name:- &lt;Badge&gt;</p>
+        </div>
+        <div class="outputWrapper">
+
+            <i class="fas fa-envelope icon">
+                <div class="numbers">4</div>
+            </i>
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="20">.sectionWrapper .outputWrapper .icon{
+                position: relative;
+                font-size: 23px;
+                color: #534e4e;
+            }
+            .sectionWrapper .outputWrapper .numbers{
+                position: absolute;
+                background-color: #007fc5;
+                color: white;
+                font-family: ui-sans-serif;
+                top: -10px;
+                left: 14px;
+                width: 22px;
+                height: 21px;
+                font-size: 14px;
+                line-height: 21px;
+                text-align: center;
+                border-radius: 12px;
+            }</textarea>
+        </div>
+    </div>
+    <!-- Component end here -->
+
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p>Component Name:- &lt;List&gt;</p>
+        </div>
+        <div class="outputWrapper">
+            <div class="outerDiv">
+                <ul class="ulDiv">
+                    <li class="listItems"><i class="fas fa-inbox"></i>&nbsp; &nbsp; Inbox</li>
+                    <li class="listItems"><i class="fas fa-envelope-open"></i>&nbsp; &nbsp; Drafts</li>
+                    <li class="listItems"><i class="fas fa-trash"></i>&nbsp; &nbsp; Trash</li>
+                    <li class="listItems"><i class="fas fa-exclamation-triangle"></i>&nbsp; &nbsp; Spam</li>
+                </ul>
+            </div>
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="23">.sectionWrapper .outputWrapper .outerDiv{
+                display: flex;
+                padding: 0px;
+                align-items: center;
+                width: 320px;
+                margin: 0px;
+                height: 200px;
+                background-color: white;
+            }
+            .sectionWrapper .outputWrapper .ulDiv{
+                width: 100%;
+                padding: 0px 0px;
+                list-style: none;
+            }
+            .sectionWrapper .outputWrapper .listItems{
+                margin: 0px 0px;
+                padding: 15px 20px;
+                border-bottom: 2px solid #e9e9e9;
+            }
+            .sectionWrapper .outputWrapper .listItems:hover{
+                background-color: rgba(0, 0, 0, 0.4);
+            }</textarea>
+        </div>
+    </div>
+    <!-- Component end here -->
+
+
+    
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p>Component Name:- &lt;App Bar/ Nav Bar&gt;</p>
+        </div>
+        <div class="outputWrapper">
+            <div class="outerDivNav">
+                <div>
+                    <div class="hamburger">
+                        <div class="linesNav"></div>
+                        <div class="linesNav"></div>
+                        <div class="linesNav"></div>
+                    </div>
+                </div>
+                
+                <input type="search" placeholder="Search" class="searchBarNav" name="search">
+                <div class="linkNavWrap">
+                    <i class="fas fa-envelope myIcons"></i>
+                    <i class="fas fa-bell myIcons"></i>
+                    <i class="fas fa-user myIcons"></i>
+                </div>
+            </div>
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="23">.sectionWrapper .outputWrapper .outerDiv{
+                display: flex;
+                padding: 0px;
+                align-items: center;
+                width: 320px;
+                margin: 0px;
+                height: 200px;
+                background-color: white;
+            }
+            .sectionWrapper .outputWrapper .ulDiv{
+                width: 100%;
+                padding: 0px 0px;
+                list-style: none;
+            }
+            .sectionWrapper .outputWrapper .listItems{
+                margin: 0px 0px;
+                padding: 15px 20px;
+                border-bottom: 2px solid #e9e9e9;
+            }
+            .sectionWrapper .outputWrapper .listItems:hover{
+                background-color: rgba(0, 0, 0, 0.4);
+            }</textarea>
+        </div>
+    </div>
+    <!-- Component end here -->
 </body>
 </html>
