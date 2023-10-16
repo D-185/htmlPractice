@@ -1,0 +1,44 @@
+.titleWrap{
+    text-align: center;
+}
+.sectionWrapper {
+    margin: 10px;
+    padding: 10px 0px;
+    background-color: #ddebdc;
+    border: 2px solid green;
+}
+
+.sectionWrapper .tagDetails {
+    padding: 20px;
+}
+
+.sectionWrapper .outputWrapper {
+    padding: 10px 20px;
+    background-color: #a9e0b2;
+}
+.sectionWrapper .outputWrapper table{
+    border-collapse: collapse;
+    width: 70%;
+    margin: auto;
+    border: 2px solid black;
+}
+.sectionWrapper .outputWrapper th, td{
+    padding: 8px;
+    text-align: left;
+    border: 1px solid black;
+}
+.sectionWrapper .outputWrapper tr:hover{
+    background-color: #D6EEEE;
+}
+
+.sectionWrapper .codeWrapper {
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.sectionWrapper .codeWrapper .textAreaWrapper {
+    width: 100%;
+    border: 2px solid black;
+    padding: 20px 0;
+}

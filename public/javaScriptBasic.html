@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics</title>
+    <link rel="stylesheet" href="./javaScriptBasic.css">
+</head>
+
+<body>
+    <h1 class="titleWrap">JavaScript Basics</h1>
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p><b>Type:- onclick</b></p>
+            <p><b>Description:-</b> It is an HTML attribute and JavaScript event handler that allows you to specify
+                a JavaScript function or script to execute when an HTML element is clicked.
+                You can assign multiple actions to an element by chaining JavaScript statements or calling multiple
+                functions within the 'onclick' attribute.
+                It can be used for a wide range of interactivity, such as form validation, toggling elemtns,
+                making AJAX requests, and more, by executing JavaScript code or functions in response to user clicks.
+
+            </p>
+        </div>
+        <div class="outputWrapper">
+            <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+                Click me to display Date and Time.
+            </button>
+            <div id="demo"></div>
+            <button type="button" onclick="document.getElementById('demo').innerHTML = '';">
+                Click me to remove Date and Time
+            </button>
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="13">
+                <button 
+                    type="button" 
+                    onclick="document.getElementById('demo').innerHTML = Date()"
+                >
+                    Click me to display Date and Time.
+                </button>
+                <div id="demo"></div>
+                <button 
+                    type="button" 
+                    onclick="document.getElementById('demo').innerHTML = '';"
+                >
+                    Click me to remove Date and Time
+                </button></textarea>
+        </div>
+    </div>
+    <!-- section 1 end here -->
+
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p><b>Type:- Variables</b></p>
+            <p><b>Description:-</b> There are three keywords for the variables 'var', 'let', and 'const'.
+                It is used to store and manage data. Variables are like containers that hold values.
+                It can be used to perform various operations and manipulate data within JavaScript code.
+            </p>
+        </div>
+        <div class="outputWrapper">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Scope</th>
+                    <th>Redeclare</th>
+                    <th>Reassign</th>
+                    <th>Hoisted</th>
+                    <th>Bind this</th>
+                </tr>
+                <tr>
+                    <td>var</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>let</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>const</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+            </table>
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="20">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Scope</th>
+                        <th>Redeclare</th>
+                        <th>Reassign</th>
+                        <th>Hoisted</th>
+                        <th>Bind this</th>
+                    </tr>
+                    <tr>
+                        <td>var</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>let</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>const</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>No</td>
+                    </tr>
+                </table>
+            </textarea>
+        </div>
+    </div>
+    <!-- section 2 end here -->
+
+
+    <div class="sectionWrapper">
+        <div class="tagDetails">
+            <p><b>Type:- Find the area.</b></p>
+            <p><b>Description:-</b>There are many methods available for working with strings,
+                each serving a specific purpose in manipulating or extracting information from strings.</p>
+        </div>
+        <div class="outputWrapper">
+            <form id="triangleAreaForm">
+                <label for="firstSide">First Side:</label>
+                <input type="number" id="firstSide" name="firstSide" required>
+                <br>
+                <label for="secondSide">Second Side:</label>
+                <input type="number" id="secondSide" name="secondSide" required>
+                <br>
+                <label for="thirdSide">Third Side:</label>
+                <input type="number" id="thirdSide" name="thirdSide" required>
+                <br>
+                <input type="submit" value="Calculate Area">
+            </form>
+            <div id="result"></div>
+        </div>
+        <div class="codeWrapper">
+            <textarea class="textAreaWrapper" disabled cols="1" rows="13">
+                document.getElementById('triangleAreaForm')
+                .addEventListener(('submit'), function(e){
+
+                e.preventDefault();
+                const a = parseFloat(document.getElementById('firstSide').value);
+                const b = parseFloat(document.getElementById('secondSide').value);
+                const c = parseFloat(document.getElementById('thirdSide').value);
+                const s = (a+b+c)/2;
+                const triangleArea = Math.sqrt(s*((s-a)*(s-b)*(s-c)));
+                document.getElementById("result").textContent = `The area of the triagnle is: ${triangleArea}`
+            console.log(a,b,c,s,triangleArea)
+
+            })
+            </textarea>
+        </div>
+    </div>
+    <!-- section 3 end here -->
+<script src="./javaScriptBasic.js"></script>
+</body>
+
+</html>
