@@ -24,93 +24,7 @@
     -->
   <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-  <style media="screen">
-    body {
-      background: #ECEFF1;
-      color: rgba(0, 0, 0, 0.87);
-      font-family: Roboto, Helvetica, Arial, sans-serif;
-
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    header {
-      background-color: #666;
-      padding: 5px;
-      text-align: center;
-      color: white;
-    }
-
-    nav {
-      float: left;
-      width: 10%;
-      height: 500px;
-      background: #ccc;
-      padding: 20px;
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    article {
-      float: left;
-      padding: 20px;
-      width: 90%;
-      background-color: #f1f1f1;
-      height: 500px;
-    }
-
-    /* Clear floats after the columns */
-    section::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    footer {
-      background-color: #777;
-      padding: 10px;
-      text-align: center;
-      color: white;
-    }
-    .dropdownMenu{
-      display: none;
-      list-style-type: none;
-      padding: 0;
-    }
-    .dropdownButton{
-      background-color: #3498db;
-      color: #fff;
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-    .dropdownMenu li {
-      padding: 5px;
-      font-size: 11px;
-    }
-    .dropdownMenu li:hover {
-      background-color: #f1f1f1;
-    }
-    .dropdown button::before {
-      content: "▶";
-      position: absolute;
-      left: 20px;
-    }
-
-    @media (max-width: 600px) {
-
-      nav,
-      articel {
-        width: 100%;
-        height: auto;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -120,47 +34,91 @@
   </header>
   <section>
     <nav>
-      <h2>Content</h2>
+      <h2 class="contentTitleWrap">Content</h2>
       <ul>
         <li>
-          <div class="dropdown">
-            <button class="dropdownButton">HTML Basics</button>
-            <ul class="dropdownMenu">
-              <li>
-                <a href="javascript:void(0);" onclick="loadIframe(`https://testfirebase-5f5a7.web.app/htmlPractice.html`);">HTML Element and Attributes</a>
-              </li>
-              <li>
-                <a href="javascript:void(0);" onclick="loadIframe(`https://testfirebase-5f5a7.web.app/fromElements.html`);">Form Elements</a>
-              </li>
-              <li>
-                <a href="javascript:void(0);" onclick="loadIframe(`https://testfirebase-5f5a7.web.app/htmlTables.html`);">Table</a>
-              </li>
-            </ul>
-          </div>
+          <button class="dropdownButton">HTML Basics<span class="arrow">►</span></button>
+          <ul class="dropdownMenu">
+            <li>
+              <a href="javascript:void(0);"
+                onclick="loadIframe(`https://testfirebase-5f5a7.web.app/htmlPractice.html`);">HTML Element and
+                Attributes</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"
+                onclick="loadIframe(`https://testfirebase-5f5a7.web.app/fromElements.html`);">Form Elements</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"
+                onclick="loadIframe(`https://testfirebase-5f5a7.web.app/htmlTables.html`);">Table</a>
+            </li>
+          </ul>
+
         </li>
         <li>
-          <div class="dropdown">
-            <button class="dropdownButton">CSS Basics</button>
-            <ul class="dropdownMenu">
-              <li>
-                <a href="javascript:void(0);" onclick="loadIframe(`https://testfirebase-5f5a7.web.app/cssProperty.html`);">Css Property</a>
-              </li>
-              <li>
-                <a href="javascript:void(0);" onclick="loadIframe(`https://testfirebase-5f5a7.web.app/gridModel.html`);">Grid Model</a>
-              </li>
-              <li>
-                <a href="javascript:void(0);" onclick="loadIframe(`https://testfirebase-5f5a7.web.app/transitionProperty.html`);">Transition Animation</a>
-              </li>
-              <li>
-                <a href="javascript:void(0);" onclick="loadIframe(`https://testfirebase-5f5a7.web.app/components.html`);">Component Design</a>
-              </li>
-            </ul>
-          </div>
+          <button class="dropdownButton">CSS Basics<span class="arrow">►</span></button>
+          <ul class="dropdownMenu">
+            <li>
+              <a href="javascript:void(0);"
+                onclick="loadIframe(`https://testfirebase-5f5a7.web.app/cssProperty.html`);">Css Property</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"
+                onclick="loadIframe(`https://testfirebase-5f5a7.web.app/gridModel.html`);">Grid Model</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"
+                onclick="loadIframe(`https://testfirebase-5f5a7.web.app/transitionProperty.html`);">Transition
+                Animation</a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"
+                onclick="loadIframe(`https://testfirebase-5f5a7.web.app/components.html`);">Component Design</a>
+            </li>
+          </ul>
+
+        </li>
+        <li>
+          <button class="dropdownButton">JavaScript<span class="arrow">►</span></button>
+          <ul class="dropdownMenu">
+            <li>
+              <a href="javascript:void(0);"
+                onclick="loadIframe(`https://testfirebase-5f5a7.web.app/javaScriptBasic.html`);">
+                JavaScript Basics
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0 5);"
+                onclick="loadIframe(`https://testfirebase-5f5a7.web.app/underConstructionPage.html`);">
+                Array Operations
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"
+                onclick="loadIframe(`https://testfirebase-5f5a7.web.app/underConstructionPage.html`);">
+                String Operations
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"
+                onclick="loadIframe(`https://testfirebase-5f5a7.web.app/underConstructionPage.html`);">
+                Object Operations
+              </a>
+            </li>
+            <li>
+              <a href="javascript:void(0);"
+                onclick="loadIframe(`https://testfirebase-5f5a7.web.app/underConstructionPage.html`);">
+                API Calling methods
+              </a>
+            </li>
+          </ul>
+
         </li>
       </ul>
     </nav>
     <article>
-      <iframe id="myIframe" src="" width="100%" height="100%"></iframe>
+      <iframe id="myIframe" src="https://testfirebase-5f5a7.web.app/htmlPractice.html" width="100%"
+        height="100%"></iframe>
     </article>
   </section>
   <footer>
@@ -207,36 +165,58 @@
       console.log("hi")
       let iframe = document.getElementById("myIframe");
       iframe.src = url;
-      console.log('iframe.src',iframe.src)
+      console.log('iframe.src', iframe.src)
 
     }
     const button = document.querySelectorAll('.dropdownButton');
     const menu = document.querySelectorAll('.dropdownMenu');
-    console.log('button', button[0], button[1] )
+    console.log('button', button[0], button[1], button[2])
     button[0].addEventListener('click', () => {
-      if(menu[0].style.display === "block") {
+      if (menu[0].style.display === "block") {
         menu[0].style.display = "none";
+        button[0].classList.remove('active')
       } else {
         menu[0].style.display = "block";
+        button[0].classList.add('active')
       }
     });
 
     document.addEventListener('click', (e) => {
-      if(!menu[0].contains(e.target) && !button[0].contains(e.target)){
+      if (!menu[0].contains(e.target) && !button[0].contains(e.target)) {
         menu[0].style.display = 'none';
+        button[0].classList.remove('active')
       }
     });
 
     button[1].addEventListener('click', () => {
-      if(menu[1].style.display === "block") {
+      if (menu[1].style.display === "block") {
         menu[1].style.display = "none";
+        button[1].classList.remove('active')
       } else {
         menu[1].style.display = "block";
+        button[1].classList.add('active')
       }
     });
     document.addEventListener('click', (e) => {
-      if(!menu[1].contains(e.target) && !button[1].contains(e.target)){
+      if (!menu[1].contains(e.target) && !button[1].contains(e.target)) {
         menu[1].style.display = 'none';
+        button[1].classList.remove('active')
+
+      }
+    });
+    button[2].addEventListener('click', () => {
+      if (menu[2].style.display === "block") {
+        menu[2].style.display = "none";
+        button[2].classList.remove('active')
+      } else {
+        menu[2].style.display = "block";
+        button[2].classList.add('active')
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if (!menu[2].contains(e.target) && !button[2].contains(e.target)) {
+        menu[2].style.display = 'none';
+        button[2].classList.remove('active')
       }
     });
 
