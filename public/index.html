@@ -28,6 +28,8 @@
 </head>
 
 <body>
+  <div id="preloader"></div>
+
   <header>
     <h2>Dian-Apps</h2>
     <div>Software-Trainee Exercise</div>
@@ -222,6 +224,14 @@
 
 
   </script>
+
+  <script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function(){
+      loader.style.display = "none";
+    })
+
+</script>
 </body>
 
 </html>
