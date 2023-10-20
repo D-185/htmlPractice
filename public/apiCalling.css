@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tr:hover {
+    background-color: #e0e0e0;
+}
+th{
+    background-color: rgb(230, 216, 216);
+}
+
+.headerWrap{
+    text-align: center;
+}
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid #333;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    background-color: #f8f8f8;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+h1{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sectionWrapper {
+    margin: 10px;
+    padding: 10px 0px;
+    background-color: #ddebdc;
+    border: 2px solid green;
+}
+
+.sectionWrapper .tagDetails {
+    padding: 20px;
+}
+
+.sectionWrapper .outputWrapper {
+    padding: 10px 20px;
+    background-color: #a9e0b2;
+}
+
+.sectionWrapper .outputWrapper table{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+.sectionWrapper .codeWrapper {
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.sectionWrapper .codeWrapper .textAreaWrapper {
+    width: 100%;
+    border: 2px solid black;
+    padding: 20px 0;
+}

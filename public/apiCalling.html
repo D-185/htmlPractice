@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Table Types</title>
+    <link rel="stylesheet" href="./apiCalling.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <h1 class="headerWrap">API calling methods.</h1>
+    <div class="pageContainer">
+        <div class="section">
+            <div class="sectionWrapper">
+                <div class="tagDetails">
+                    <p><b>Type:- Using Fetch(get method)</p>
+                    <p><b>Description:-</b> The fetch API provides a JavaScript interface for accessing and manipulating
+                        parts of the protocol,
+                        such as requests and responses. It also provides a global fetch(). method that provides an easy,
+                        logical way to fetch resources asynchronously across the network.
+                        Unlike XMLHttpRequest that is a callback-based API, Fetch is promise-based and provides a
+                        better alternative that can be easily used in service workers. Fetch also integrates advanced
+                        HTTP concepts such as CORS
+                        and other extensions to HTTP.
+                    </p>
+                </div>
+                <div class="outputWrapper">
+                    <button onclick="fetchData()">Fetch Data</button>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>salary</th>
+                            </tr>
+                        </thead>
+                        <tbody id="fetchTableBodyWrap">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="codeWrapper">
+                    <textarea class="textAreaWrapper" disabled cols="1" rows="20">function fetchData() {
+                        fetch('https://dummy.restapiexample.com/api/v1/employees')
+                            .then((res) => res.json())
+                            .then((apiData) => {
+                                const tableBody = document.getElementById('fetchTableBodyWrap');
+                                console.log('apiData', apiData)
+                                const tableRows = apiData.data.map((item) =>
+                                    `<tr>
+                                <td>${item.id}</td>
+                                <td>${item.employee_name}</td>
+                                <td>${item.employee_salary}</td>
+                            </tr>`
+                                ).join(''); //Convert the array of table rows to a single string
+                    
+                                tableBody.innerHTML = tableRows; // Set the table body's HTML
+                            })
+                            .catch((error) => {
+                                console.error("Error:", error);
+                            })
+                    }</textarea>
+                </div>
+            </div>
+        </div>
+
+        <!--New method starts from here-->
+
+
+
+        <div class="section">
+            <div class="sectionWrapper">
+                <div class="tagDetails">
+                    <p><b>Type:- Using Axios(get method)</p>
+                    <p><b>Description:-Axios is a powerful and versatile library that simplifies HTTP
+                        requests and responses, making it a go-to choice for many web developers and
+                        software engineers when dealing with APIs and network communication in both
+                        frontend and backend applications. Its promise-based nature, cross-environment
+                        compatibility, and support for advanced features like interceptors and data
+                        transformations contribute to its popularity and widespread adoption.
+                    </b>
+                    </p>
+                </div>
+                <div class="outputWrapper">
+                    <button onclick="axiosData()">Fetch Data</button>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>City</th>
+                            </tr>
+                        </thead>
+                        <tbody id="axiosTableBodyWrap">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="codeWrapper">
+                    <textarea class="textAreaWrapper" disabled cols="1" rows="23">function axiosData() {
+                        const apiUrl = 'https://mocki.io/v1/d4867d8b-b5d5-4a48-a4ab-79131b5809b8';
+                    
+                        axios
+                            .get(apiUrl)
+                            .then((response) => {
+                                const apiResponse = response.data;
+                    
+                                const table = document.getElementById('axiosTableBodyWrap');
+                    
+                                const tableRows = apiResponse.map((item) =>
+                                    `<tr>
+                                <td>${item.name}</td>
+                                <td>${item.city}</td>
+                            </tr>`
+                                ).join('');
+                                table.innerHTML = tableRows;
+                            })
+                            .catch((error) => {
+                                console.error("Error:", error);
+                            })
+                    }</textarea>
+                </div>
+            </div>
+        </div>
+
+        <!--New method starts from here-->
+    </div>
+    <script src="./apiCalling.js"></script>
+</body>
+
+</html>
