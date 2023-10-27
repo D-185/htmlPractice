@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+    <link rel="stylesheet" href="./arrayOperations.css">
+    <script src="./scrollPosition.js"></script>
+
+</head>
+
+<body>
+    <div class="sectionWrapper">
+        <h2>Array operations</h2>
+        <div class="tagDetails">
+            <p><b>Types:-</b>
+                length, join(), toString(), pop(), push(), shift(), unshift(), join(), delete(), concat(), flat(),
+                splice(), slice() </p>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b> 1 <br>
+            <b> index:-</b> To access the element at a specific index.<br>
+            arr[index]
+            <br><br>
+            const arr = [1, 2, 3]<br>
+            console.log("array at the index 0:", arr[0]);
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                 "array at the index 0:", 1
+            </textarea>
+        </div>
+
+
+        <div class="outputWrapper">
+            <b>Operation:-</b> 2 <br>
+            <b>length:-</b> It will returns the number of elements in array.<br><br>
+            const arr = [1, 2, 3]<br>
+            console.log('array length', arr.length);
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                 "array length", 3
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>3<br>
+            <b>toString():-</b> It convert the array into string using comma-separated values<br><br>
+            const arr = [1, 2, 3]<br>
+            const numbersString = arr.toString();<br>
+            console.log('numbers String', numbersString);
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "numbers String", "1,2,3"
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>4<br>
+            <b>pop():-</b> It will removes the last element from an array and return the element.<br><br>
+            const arr = [1, 2, 3]<br>
+            const lastElement = arr.pop();<br>
+            console.log("the new array is:", arr, "the last element is:", lastElement);
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "the new array is:", [1, 2], "the last element is:", 3
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>5<br>
+            <b>push():-</b> It will add one or more elements to the end of an array and returns the new length of the
+            array.<br><br>
+            const arr = [1, 2, 3]<br>
+            const newLength = arr.push(4, 3);<br>
+            console.log("the new array is:", arr, "length of the new array is:", newLength);
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "the new array is:", [1, 2, 3, 4, 3], "length of the new array is:",5
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>6<br>
+            <b>shift():-</b> It will remove the first element from an array and returns that element.<br><br>
+            const arr = [1, 2, 3]<br>
+            const firstElement = arr.shift();<br>
+            console.log("the new array is:", arr, "the first element is:", firstElement);
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "the new array is:", [2, 3], "the first element is:",1
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>7<br>
+            <b>unshift():-</b> It will add one or more elements to the biginning of an array and returns the new length
+            of the array.<br><br>
+            const arr = [1, 2, 3]<br>
+            const newLength = arr.unshift(9);<br>
+            console.log("the new array is:", arr, "length of the new array is:", newLength);
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "the new array is:", [9, 1, 2, 3], "length of the new array is:",4
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>8<br>
+            <b>join():-</b> It will creates a string from an array by concatenating all the elements using the specified
+            separator.<br><br>
+            const arrChar = ['a','b','c','d']<br>
+            const joinedString = arrChar.join('-');<br>
+            console.log("the string is:", joinedString);
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "the string is:", "a-b-c-d"
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>9<br>
+            <b>delete:-</b> It will delete an element from an array and leaves an empty slot in the array.<br><br>
+            const numbers = [1, 2, 3, 4, 5]<br>
+            delete numbers[3];<br>
+            console.log("the updated array is:", numbers);
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "the updated array is:", [1, 2, 3, undefined, 5]
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>10<br>
+            <b>concat():-</b> It will merge two or more arrays into a new array.<br><br>
+            const arr1 = [1, 2]<br>
+            const arr2 = [3, 4]<br>
+            const combineArr = arr1.concat(arr2);<br>
+            console.log("the combined array is:", combineArr);
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "the combined array is:", [1, 2, 3, 4]
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>11<br>
+            <b>flat():-</b> It removes nested arrays.<br><br>
+            const nestedArr = [1, [2, 3], [4, 5, [6]]]<br>
+            const flattenedArr = nestedArr.flat(2)<br>
+            console.log("the simplified array is:", flattenedArr);
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "the simplified array is:", [1, 2, 3, 4, 5, 6]
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>12<br>
+            <b>splice():-</b> It will add or remove elements from an array at a specified index and returns an array
+            with removed elements.<br>
+            array.splice(index, howMany, item1, ....., itemX)<br><br>
+            const arr3 = [1, 2, 3, 4, 5, 6]<br>
+            const removedElementsArr = arr3.splice(2,2,2.5)<br>
+            console.log("The removed elements as an array is:", removedElementsArr, "The new array is:", arr3);
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "The removed elements as an array is:", [3, 4], "The new array is:", [1, 2, 2.5, 5, 6]
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>13<br>
+            <b>slice():-</b> It will returns a shallow copy of a portion of an array into a new array.<br>
+            array.slice(start index, end index)<br><br>
+            const arr3 = [1, 2, 3, 4, 5, 6]<br>
+            const removedElementsArr = arr3.slice(1, 4)<br>
+            console.log("The removed array is:", removedElementsArr);
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "The removed array is:", [2, 3, 4]
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>14<br>
+            <b>Rest operator:-</b> It will returns an indefinite number of arguments as an array.<br>
+            It's denoted by three dots('...') followed by a variable name.<br><br>
+            const numbers = [10, 20, 30, 40, 50];<br>
+            const [first, second, ...rest] = numbers;<br>
+            console.log('first', first);<br>
+            console.log('second', second);<br>
+            console.log('rest', rest);<br>
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="4">
+                "first", 10
+                "second", 20
+                "rest", [30, 40, 50]
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>15<br>
+            <b>Spread operator:-</b> It is used to spread the elements of an iterable (like an array or string) into
+            places where multiple elements are expected.<br>
+            spread inside an array:- [...Array]<br><br>
+
+            const arr1 = [1, 2, 3];<br>
+            const arr2 = [4, 5, 6];<br>
+            const combinedArray = [...arr1, ...arr2];<br>
+
+            console.log('combinedArray', combinedArray);<br>
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "combinedArray", [1, 2, 3, 4, 5, 6]
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>16<br>
+            <b>map():-</b> Creates a new array with the results of calling a provided function on each element.<br>
+            <br><br>
+
+            const arr1 = [1, 2, 3];<br>
+            const doubled = arr1.map((num) => num * 2);<br>
+
+            console.log('The new array is:', doubled);<br>
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "The new array is:", [2, 4, 6]
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>17<br>
+            <b>filter():-</b> Creates a new array with all elements that pass a test.<br>
+            <br><br>
+
+            const arr1 = [1, 2, 3, 4];<br>
+            const filtered = arr1.filter((num) => num % 2 === 0);<br>
+
+            console.log('The filtered array is:', filtered );<br>
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "The filtered array is:", [2, 4]
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>18<br>
+            <b>reduce():-</b> Reduces the array to a single value based on a provided function.<br>
+            <br><br>
+
+            const arr1 = [1, 2, 3, 4];<br>
+            const reducedValue = arr1.reduce((acc, num) => acc + num, 0);<br>
+
+            console.log('The reduced value is:', reducedValue);<br>
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "The reduced value is:", 10
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>19<br>
+            <b>forEach():-</b> <br>
+            <br><br>
+
+            const fruits = ['apple', 'banana', 'cherry'];<br>
+            fruits.forEach((fruit) => console.log("fruit name:", fruit));<br>
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "fruit name:", apple
+                "fruit name:", banana
+                "fruit name:", cherry
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>20<br>
+            <b>indexOf(element):-</b> <br>
+            It returns the first index at which a given element can be found in the array, or -1 if it is not found.
+            <br><br>
+
+            const fruits = ['apple', 'banana', 'cherry'];<br>
+            const index = fruits.indexOf('banana');<br>
+            console.log("Index of banana is:", index)
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "Index of banana is:", 1
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>21<br>
+            <b>lastIndexOf(element):-</b> <br>
+            It returns the index of the last occurrence of the specified element in the array. If the element is not
+            found, it returns -1.
+            <br><br>
+
+            const fruits = ['red', 'green', 'blue', 'yellow', 'green'];<br>
+            const lastIndex = fruits.lastIndexOf('green');<br>
+            console.log("Last index of green is:", lastIndex)
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "Last index of green is:", 4
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>22<br>
+            <b>includes(element, fromIndex):-</b> <br>
+            It is used to check whether an array contains a specific element.
+            <br><br>
+
+            const arr5 = [1, 2, 3, 4, 5];<br>
+            const included = arr5.includes(4, 2);<br>
+            console.log("Element exists:", included)
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "Element exists:" true
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>23<br>
+            <b>find(callback):-</b> <br>
+            It returns the value of the first element that passes the test implementated by the provided callback
+            function, or 'underfined' if now element satisfies the condition.
+            <br><br>
+
+            const arr5 = [1, 2, 3, 4, 5];<br>
+            const foundNumber = arr5.find((item) => item > 3);<br>
+            console.log("The first greater than 3 is:", foundNumber)
+        </div>,
+        <div class="codeWrapper">
+
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "The first greater than 3 is:" 4
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>24<br>
+            <b>findIndex(callback):-</b> <br>
+            It is used to find the index of the first element in an array that satisfies a given callback function.
+            It returns the index of the first element that passes the test implemented by the provided callback
+            function, or -1 if no element satisfies the condition.
+            <br><br>
+
+            const arr5 = [1, 2, 3, 4, 5];<br>
+            const foundIndex = arr5.findIndex((item) => item > 3);<br>
+            console.log("Index of the first greater than 3 is:", foundNumber)
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "Index of the first greater than 3 is:" 3
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>25<br>
+            <b>sort():-</b> <br>
+            It is used to sort the elements of an array in place and returns the sorted array.
+            By default, it sorts the elements as strings in ascending order.
+            <br><br>
+
+            const arr5 = ['apple', 'banana', 'cherry', 'date', 'blueberry'];<br>
+            const sortedArry = arr5.sort();<br>
+            console.log("The sorted array is:", sortedArry)
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "The sorted array is:", ["apple", "banana", "blueberry", "cherry", "date"]
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>26<br>
+            <b>sort():-</b> <br>
+            It is used to sort the elements of an array in place and returns the sorted array.
+            By default, it sorts the elements as strings in ascending order.
+            <br><br>
+
+            const arr5 = ['apple', 'banana', 'cherry', 'date', 'blueberry'];<br>
+            const sortedArry = arr5.sort();<br>
+            console.log("The sorted array is:", sortedArry)
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "The sorted array is:", ["apple", "banana", "blueberry", "cherry", "date"]
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>27<br>
+            <b>reverse():-</b> <br>
+            It is used in JavaScript to reverse the order of elements in an array.
+            This method mutates the original array, meaning it modifies the array in place and does not create a new
+            array.
+            <br><br>
+
+            const arr5 = [1, 2, 3, 4, 5];<br>
+            const sortedArry = arr5.reverse();<br>
+            console.log("The reversed array is:", arr5)
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "The reversed array is:", [5, 4, 3, 2, 1]
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>28<br>
+            <b>Array.isArray(value):-</b> <br>
+            It is used to determine whether a given value is an array.
+            <br><br>
+
+            const arr5 = [1, 2, 3, 4, 5];<br>
+            const str = "Hello, World"; <br>
+            console.log("check for arr5:", Array.isArray(arr5))<br>
+            console.log("check for str:", Array.isArray(str))
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="3">
+                "check for arr5:", true
+                "check for str:", false
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>29<br>
+            <b>every(callback):-</b> <br>
+            It is used to check if all elements in an array pass a certain test(provided as a callback function).
+            It returns true if all elements in the array satisfy the specified condition; otherwise, it returns false.
+            <br><br>
+
+            const arr5 = [2, 4, 6, 8, 10];<br>
+            const allEven = arr5.every(function(element){
+            return element % 2 === 0;
+            }) <br>
+            console.log("All elements in the array pass the test:", allEven)<br>
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "All elements in the array pass the test:", true
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>30<br>
+            <b>some(callback):-</b> <br>
+            It is used to check if at least one element in an array satisfies a specified condition(provided as a
+            callback function).
+            It returns true if at least one element in the array passes the condition; otherwise, it returns false.
+            <br><br>
+
+            const arr5 = [1, 3, 7, 8, 5, 9];<br>
+            const atLeastOneEven = arr5.some(function(element){ return element % 2 === 0; })<br>
+            console.log("At lest one element in the array pass the test:", allEven)<br>
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "At lest one element in the array pass the test:", true
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>31<br>
+            <b>array.fill(value, start, end):-</b> <br>
+            It is used to change or fill elements in an array with a specified static value.
+            It modifies the original array and returns a reference to that array.
+            <br><br>
+
+            const arr5 = [1, 3, 7, 8, 5, 9];<br>
+            //Fill the array with the value 0 from index 2 to 4 (not inclusive)<br>
+            arr5.fill(0, 2, 4)<br>
+            console.log("The modified array is:", arr5)<br>
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "The modified array is:", [1, 3, 0, 0, 5, 9]
+            </textarea>
+        </div>
+
+        <div class="outputWrapper">
+            <b>Operation:-</b>32<br>
+            <b>array.copyWithin(target, start, end):-</b> <br>
+            It is used to copy a portion of an array to another location within the same array, overwriting the existing elements.
+            It does not change the length of the array.
+            <br><br>
+
+            const arr5 = [1, 3, 7, 8, 5, 9];<br>
+            // Copy the elements from index 0 to index 2 to index 3<br>
+            arr5.copyWithin(3, 0, 3);<br>
+            console.log("The modified array is:", arr5)<br>
+        </div>,
+        <div class="codeWrapper">
+            <b>Console:-</b>
+            <textarea class="textAreaWrapper" disabled cols="1" rows="2">
+                "The modified array is:", [1, 3, 7, 1, 3, 7]
+            </textarea>
+        </div>
+    </div>
+</body>
+
+</html>

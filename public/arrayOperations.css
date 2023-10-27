@@ -1,0 +1,33 @@
+h2{
+    text-align: center;
+}
+.leftAlign{
+    text-align: left;
+}
+.sectionWrapper {
+    margin: 10px;
+    padding: 10px 0px;
+    background-color: #ddebdc;
+    border: 2px solid green;
+}
+
+.sectionWrapper .tagDetails {
+    padding: 20px;
+}
+
+.sectionWrapper .outputWrapper {
+    padding: 10px 20px;
+    background-color: #a9e0b2;
+}
+
+.sectionWrapper .codeWrapper {
+    margin: 10px auto;
+    width: 80%;
+    text-align: left;
+}
+
+.sectionWrapper .codeWrapper .textAreaWrapper {
+    width: 100%;
+    border: 2px solid black;
+    padding: 20px 0;
+}
